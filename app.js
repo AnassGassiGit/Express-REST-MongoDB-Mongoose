@@ -52,6 +52,7 @@ function auth(req, res, next){
   var username=auth[0];
   var password=auth[1];
 
+  
   if(username==='admin' && password==='password'){
     next();
   }
