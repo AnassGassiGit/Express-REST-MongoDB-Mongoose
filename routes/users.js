@@ -8,7 +8,7 @@ var authenticate = require('../authenticate');
 var router=express.Router();
 router.use(bodyParser.json());
 
-router.get('/', function(req, res, next){
+router.get('/',authenticate.verifyAdmin, function(req, res, next){
     res.send('respond with resource');
 });
 
